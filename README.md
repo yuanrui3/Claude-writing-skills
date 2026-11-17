@@ -49,6 +49,7 @@ They work as they are for those books, and as worked examples for anyone buildin
 |---|---|
 | [`slowfire-zh-check`](skills/slowfire-zh-check/SKILL.md) | Proofs a Chinese chapter before and after publishing: 翻译腔, AI tells (去AI味) judged in context, a cold read by Qwen as a reader who hasn't read the earlier books, adversarial readers who look only for problems, look-alike typos found by script, canon names and terms, dates and clocks computed rather than guessed, and a scripted 汉字 count. |
 | [`sichuanese-dialogue`](skills/sichuanese-dialogue/SKILL.md) | Writes and checks 四川话 dialogue (Chengdu, Chongqing) against the project's own verified lexicon first, and sends Qwen only the new or doubtful lines, one batch per chapter; every settled or rejected form goes back into the lexicon. |
+| [`yangtze-delta-dialogue`](skills/yangtze-delta-dialogue/SKILL.md) | The same method for 上海话, 苏州话, 常熟话, 杭州话 and 南京话: knows which forms belong to which city, keeps dialect mostly in older speakers' mouths for a story set in 2048, writes standard dialect forms rather than homophone spellings, and checks only new or doubtful lines with Qwen. |
 | [`serious-lit-relationships`](skills/serious-lit-relationships/SKILL.md) | Writes relationships the way serious fiction does, not 言情: each relationship beat is carried by a move from a named work (《繁花》's 不响, 王小波, 谷崎, Duras, Munro, Carver, Ernaux, Ferrante, Rooney…) with a test on the page, and 言情 and 网文 tells are searched for and fixed. |
 | [`character-voice`](skills/character-voice/SKILL.md) | A voice card for each speaker, a cover test (hide the tags: could two people swap lines?), and a check for the writer's own quotable lines leaking into a character's mouth. |
 | [`in-world-imagery`](skills/in-world-imagery/SKILL.md) | Audits every simile: each image must come from the point-of-view character's own trade, place or body, one a paragraph at most; the future shows in one line someone handles, never a paragraph of mechanism. |
@@ -62,6 +63,7 @@ They work as they are for those books, and as worked examples for anyone buildin
 | [`slowfire-real-people`](skills/slowfire-real-people/SKILL.md) | Turns real people the author knows into characters nobody can pick out: keep behaviour and voice, change every identifying label, move telling details to other characters, split or merge into the existing cast, test the result, and record only the fiction. This public copy has its examples made generic; it names no characters. |
 | [`story-idea-weave`](skills/story-idea-weave/SKILL.md) | Folds a new idea into a book already under way (a theme, a social issue, a character type): turns it into a question the cast answers differently, gives it to three to six characters, ties it to the plot's clock, schedules seed, turn and payoff across chapters, and keeps it shown, never preached. |
 | [`plot-ledger`](skills/plot-ledger/SKILL.md) | Keeps four ledgers per book (money, who knows what and when, who is where and when, and what has already been said) and checks every new chapter against them: sums done in code, clocks and weekdays computed, knowledge leaks and teleporting objects flagged. |
+| [`novel-comprehension-test`](skills/novel-comprehension-test/SKILL.md) | Tests whether a finished volume gets its characters and plots across: Qwen reads it cold, chapter by chapter, says who is who and what happened, then retells each arc; the answers are scored against an answer key written beforehand, and lost threads are fixed with the smallest change. |
 | [`roast-in-fiction`](skills/roast-in-fiction/SKILL.md) | Puts the [roast-anything](https://github.com/yuanrui3/AI-benchmark-for-roasting/blob/main/.claude/skills/roast-anything/SKILL.md) method in a character's mouth: 吐槽, quarrels, toasts and satirical narration built on the book's own facts, in that character's voice, where the roast changes the scene and someone answers back. |
 
 ## Using them
@@ -71,7 +73,7 @@ They work as they are for those books, and as worked examples for anyone buildin
 - **claude.ai:** zip a skill's folder and upload it as a skill in your account's skill settings.
 
 `qwen-consult` and `waimao-to-image` need Claude in Chrome and a signed-in Qwen account in that Chrome;
-`slowfire-zh-check`, `slowfire-chapter-notes` and `sichuanese-dialogue` call `qwen-consult`, and `waimao-to-image` also needs access to the
+`slowfire-zh-check`, `slowfire-chapter-notes`, the two dialect skills and `novel-comprehension-test` call `qwen-consult`, and `waimao-to-image` also needs access to the
 author's computer to move the image files. `plot-unexpectedness` works best where Claude can start sub-agents on a smaller model; without them it
 tells you how to run the predictor by hand. `slowfire-print-edition` needs pandoc, xelatex and CJK fonts (Noto Serif
 CJK SC) where it runs.

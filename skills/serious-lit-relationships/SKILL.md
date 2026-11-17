@@ -27,6 +27,7 @@ Keep it in the book's index doc, under "Craft". Each row gives the work, its mov
 | Sally Rooney | power and class inside dialogue; consent spoken aloud | who pays and who decides, said out loud |
 | Milan Kundera | lightness against weight; eros split from love; each lover's code | the character's rule is stated or broken |
 | 毕飞宇《推拿》 | touch as work; the dignity of rented hands | hands do a job in the scene |
+| 霍达《穆斯林的葬礼》 | a craft as a whole life, passed from master to apprentice; sisters and a child raised by the wrong one in secret; faith as the wall love runs into, written from inside with respect; ritual and death written concretely and solemnly; two time strands braided | the craft carries the feeling; a secret about who raised whom; a rite shown step by step, never mocked |
 
 To add a work, it must be one the author named or a canonical book you know well. Write its move and test in your own words, and never quote or paste passages from it. A craft essay found by web search can sharpen a row; cite it in the index.
 
