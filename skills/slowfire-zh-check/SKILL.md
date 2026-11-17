@@ -1,6 +1,6 @@
 ---
 name: "slowfire-zh-check"
-description: "Proof a Chinese chapter of 阴燃 or a spin-off (火候, 明火, 火德, 燎原…) before and after publishing: 翻译腔, a Qwen cold read for comprehension, look-alike typos, canon names and terms, dates and clocks, 汉字 count."
+description: "Proof a Chinese chapter of 阴燃 or a spin-off (火候, 明火, 火德, 燎原…) before and after publishing: 翻译腔, AI tells (去AI味), a Qwen cold read plus adversarial reviewers, look-alike typos, canon names and terms, dates and clocks, 汉字 count."
 ---
 
 # Checking a Chinese chapter
@@ -17,6 +17,46 @@ The author reads only the Chinese, so the Chinese gets the strict check. Run thi
 - Short or incomplete sentences are welcome, but not everywhere.
 - Ambiguous pronouns ("他背对着他说"): name one of them.
 - Dialect (成都话, 合肥话, 丰县话…) only where the book allows it. Every dialect line goes to Qwen line by line (qwen-consult skill). A line Qwen passes is not proven: it passed 错得板正, and no Chengdu speaker says that. Prefer the common, blunt idiom (标准个铲铲) over a clever coinage.
+
+## 1a. AI tells (去AI味)
+Adapted from story-deslop in oh-story-claudecode (MIT, github.com/worldwonderer/oh-story-claudecode). The signals below are things to judge in context, not banned words. Keep a form when it does work: a real contrast in an argument, a character's own voice, a motif such as Corinne's 不能多也不能少. Cut or rewrite only what fakes weight or says again what the reader already has. Never fake "realness" by adding micro-gestures, swearing or random sensory detail.
+
+Check three layers.
+
+**Expression.**
+- 否定翻转: 不是A，是B, where the A nobody believed is knocked down only to announce B. 火候's 不是扇风，是扇时间 was one, an author's 金句 in a teahouse boss's mouth.
+- 工整并列 that repeats one point.
+- 万能状语 and stock voices: 带着一丝……, 声音不大，却不容置疑, 平静得像…….
+- Scare quotes on ordinary words.
+- Template metaphors and big abstractions: 命运的齿轮, 潮水般.
+- Explanation chains: 这意味着, 他终于明白, 她这才意识到.
+- Inflation and prophecy: 意义深远, 他不知道的是, 多年以后.
+- Body parts that only label an emotion: 指节泛白, 指尖轻叩, 嘴角勾起.
+- Genre stock lines. The 耗美 scent-marking 你身上还是我的味道 was replaced by a callback to the night itself.
+- 电报体: facts reported one clause at a time when they are one cause chain.
+
+**Weight.** Name in one line what each scene must make the reader live through. Then:
+- compress routine process (opening doors, pouring water);
+- don't let a summary swallow the turn (三言两语说清楚, 她终于想通了);
+- cut states that circle without change;
+- add the transition where a result arrives without one.
+
+**Story logic.**
+- Each choice rests on what the character knows (plot-ledger).
+- Each result has its cause on the page.
+- The other side has its own interest.
+- Solutions are set up earlier.
+- What happened changes what comes next.
+- Rules of the world hold (scifi-world-check).
+
+Searchable signals, for the first pass:
+```python
+import re
+SIG = r'不是[^，。？！]{1,12}，(?:而)?是|没有[^，。]{1,8}，没有[^，。]{1,8}，只有|带着一丝|声音不大，却|不容置疑|毫无波澜|平静得像|这意味着|真正重要的是|由此可见|终于明白|这才意识到|不知道的是|殊不知|多年以后|冥冥之中|仿佛预示|命运|宿命|齿轮|意义深远|恰到好处|恰如其分|指节泛白|指尖轻叩|嘴角勾起|眸|眼底闪过|心头一紧|呼吸一滞'
+for m in re.finditer(SIG, text):
+    print(text[max(0, m.start()-20):m.end()+20])
+```
+Judge each hit in its sentence. Lines a character must say well also go to Qwen with the question "俗不俗套？" (the author asked exactly that twice in 火候).
 
 ## 1b. Cold read by Qwen: can a reader follow it?
 A line-by-line dialect pass doesn't show whether the chapter reads. The author caught four things it missed in 火候 chapter 2:
@@ -43,11 +83,23 @@ So before publishing, and again after any large edit, send Qwen the whole chapte
 - **Re-check late lines.** Lines added or changed after the read, including answers to the author's comments, go to Qwen in one batch before they land or right after.
 - **Log** what was taken and what wasn't in the index doc.
 
+## 1c. Adversarial readers (after oh-story-claudecode's story-review)
+For a new chapter, or a rewrite of a turning point, add fresh readers that haven't seen you write it. Each gets only the chapter text and the canon excerpts it needs, and the rule: 审查是找问题，不是验证正确性.
+
+Use sub-agents where the session allows, or separate Qwen messages. Give each one brief:
+- **Structure and pace:** does a relationship move by a real event; does the chapter end on a hook; which beat is predictable (plot-unexpectedness for a full test).
+- **Character and voice:** does each person act from their own interest, and speak as themselves rather than as the author.
+- **Line:** the 1a signals, 翻译腔 and 金句.
+- **Consistency:** the plot ledgers and the world rules.
+
+Each finding comes back as a quote, the problem and a fix. Settle them as in 1b and log them the same way.
+
 ## 2. Typos: by script, not by eye
 - Grep every character name and key term from the name list and count each. A name that appears once where it should appear many times is usually a typo for another. Past slips: 凉峥 for 冉峥, 疑疑肉 for 粑粑肉, 耀朋友 for 耍朋友, 暖腔片 for 挡片.
 - Escaped quotes (`\"`), stray Markdown, half-width punctuation (, . ? ! : ;) inside Chinese sentences, mixed quote styles.
 - After publishing, check the tab against the local draft by hash. Every doc block carries h = the first 8 hex of sha256 of its UTF-8 plain text. Read the tab with the outline view, copy the h values into a file, hash the local paragraphs the same way (strip Markdown: headings, **, italics), and compare. Every local paragraph missing from the doc is either the author's own edit (carry it back to the draft) or a bug (fix it, then confirm the new h).
 - Why hashes and not a search: payloads typed by hand can turn a rare character into a near neighbour (噻 became 嘻 in 火候 ch2), and a search typed by the same hand repeats the slip. The hash comparison is the only check that doesn't depend on retyping.
+- Write Chinese characters directly in payloads and comment replies; never hand-type \u escapes. A hand-escaped reply turned 耽 into 耗 in a 火候 comment thread.
 
 ## 3. Canon
 - Names and terms exactly as listed. Standing examples: 第三档套餐, never T3; hall 7's 02:00 is 断电／拉闸／限电, never 放掉 or 释放; 阳光场, not 太阳场; Indiana is a 州 (州政府, 州议会), never 国家; 念念 in narration; real fab words (挡片, 控片), no coinages.

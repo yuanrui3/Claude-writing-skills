@@ -23,7 +23,9 @@ it; it's built for that. These skills aim the other way:
 - **Made for the finished book.** Spoiler-safe notes, figures checked numeral by numeral against the text, and an
   annotated print edition whose text is verified identical to the manuscript.
 
-Both keep a book's continuity in files and both strip AI-sounding prose. The difference is what the book is for.
+Both keep a book's continuity in files and both strip AI-sounding prose; `slowfire-zh-check`'s AI-tells and
+adversarial-reader steps are adapted from Oh Story's `story-deslop` and `story-review` (MIT). The difference is what
+the book is for.
 
 **中文简介：** 一套用 Claude 写严肃文学的技能，面向带科幻设定的中文长篇，是在写《阴燃》系列的过程中一条条攒下来的。和面向起点、番茄的网文技能包
 Oh Story 不同，它不追套路，而是先测出读者猜得到的套路，再避开；方言和现实细节交给另一个模型（通义千问）冷读，日期、钟点、钱数用代码算；主题交给人物去争，不让叙述去讲；真人原型改到熟人认不出；最后出的是带注释、配图、和稿子逐字一致的印刷版。
@@ -42,7 +44,8 @@ They work as they are for those books, and as worked examples for anyone buildin
 
 | Skill | What it does |
 |---|---|
-| [`slowfire-zh-check`](skills/slowfire-zh-check/SKILL.md) | Proofs a Chinese chapter before and after publishing: 翻译腔, a cold read by Qwen as a reader who hasn't read the earlier books, look-alike typos found by script, canon names and terms, dates and clocks computed rather than guessed, and a scripted 汉字 count. |
+| [`slowfire-zh-check`](skills/slowfire-zh-check/SKILL.md) | Proofs a Chinese chapter before and after publishing: 翻译腔, AI tells (去AI味) judged in context, a cold read by Qwen as a reader who hasn't read the earlier books, adversarial readers who look only for problems, look-alike typos found by script, canon names and terms, dates and clocks computed rather than guessed, and a scripted 汉字 count. |
+| [`sichuanese-dialogue`](skills/sichuanese-dialogue/SKILL.md) | Writes and checks 四川话 dialogue (Chengdu, Chongqing) against the project's own verified lexicon first, and sends Qwen only the new or doubtful lines, one batch per chapter; every settled or rejected form goes back into the lexicon. |
 | [`slowfire-chapter-notes`](skills/slowfire-chapter-notes/SKILL.md) | Writes and prunes a chapter's ①② notes: only what a reader from outside the dialect region can't get from the page, calibrated against the notes the author cut, with Qwen judging the borderline ones and a script to renumber after cuts. |
 | [`slowfire-figures`](skills/slowfire-figures/SKILL.md) | Makes a chapter's figures: picks the style the book allows, draws in code so it can be redrawn, checks every numeral against the text, writes the caption, places the figure and logs it. |
 | [`waimao-to-image`](skills/waimao-to-image/SKILL.md) | The reverse of `photo-to-waimao`: turns a character's 外貌描写 into a realistic figure with Qwen-Image, checks every visible detail against the text, and keeps the prompt as the character's cast entry so the face stays the same across chapters. Faces are always invented; never a real person. |
@@ -59,7 +62,7 @@ They work as they are for those books, and as worked examples for anyone buildin
 - **claude.ai:** zip a skill's folder and upload it as a skill in your account's skill settings.
 
 `qwen-consult` and `waimao-to-image` need Claude in Chrome and a signed-in Qwen account in that Chrome;
-`slowfire-zh-check` and `slowfire-chapter-notes` call `qwen-consult`, and `waimao-to-image` also needs access to the
+`slowfire-zh-check`, `slowfire-chapter-notes` and `sichuanese-dialogue` call `qwen-consult`, and `waimao-to-image` also needs access to the
 author's computer to move the image files. `plot-unexpectedness` works best where Claude can start sub-agents on a smaller model; without them it
 tells you how to run the predictor by hand. `slowfire-print-edition` needs pandoc, xelatex and CJK fonts (Noto Serif
 CJK SC) where it runs.
