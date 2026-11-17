@@ -46,7 +46,8 @@ So before publishing, and again after any large edit, send Qwen the whole chapte
 ## 2. Typos: by script, not by eye
 - Grep every character name and key term from the name list and count each. A name that appears once where it should appear many times is usually a typo for another. Past slips: 凉峥 for 冉峥, 疑疑肉 for 粑粑肉, 耀朋友 for 耍朋友, 暖腔片 for 挡片.
 - Escaped quotes (`\"`), stray Markdown, half-width punctuation (, . ? ! : ;) inside Chinese sentences, mixed quote styles.
-- After publishing: export the tab (docs `create` a Markdown blob of the tab, then fetch the asset by id with the Artifact tool's read action) and diff it against the local draft. Every difference is either an edit to carry back to the draft or a bug.
+- After publishing, check the tab against the local draft by hash. Every doc block carries h = the first 8 hex of sha256 of its UTF-8 plain text. Read the tab with the outline view, copy the h values into a file, hash the local paragraphs the same way (strip Markdown: headings, **, italics), and compare. Every local paragraph missing from the doc is either the author's own edit (carry it back to the draft) or a bug (fix it, then confirm the new h).
+- Why hashes and not a search: payloads typed by hand can turn a rare character into a near neighbour (噻 became 嘻 in 火候 ch2), and a search typed by the same hand repeats the slip. The hash comparison is the only check that doesn't depend on retyping.
 
 ## 3. Canon
 - Names and terms exactly as listed. Standing examples: 第三档套餐, never T3; hall 7's 02:00 is 断电／拉闸／限电, never 放掉 or 释放; 阳光场, not 太阳场; Indiana is a 州 (州政府, 州议会), never 国家; 念念 in narration; real fab words (挡片, 控片), no coinages.

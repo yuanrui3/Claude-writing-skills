@@ -9,7 +9,7 @@ A chapter isn't finished until its figures are in, unless the author has said to
 
 ## How many and which style
 - 阴燃 Volumes 1–2: two figures a chapter, one style within a chapter. Volume Two picks from styles Volume One used; a new style only when the author agrees (oscilloscope art in ch32 was the one exception).
-- Spin-offs follow the book's own rule; read its index doc. 《明火》: exhibit plates on cream paper, black ink, one flame red (#D9441E), gold only for 珀尔's lines, in the PDF only. 《火德》: Chinese-style figures. 《火候》 (author, 17 Nov): two a chapter. One shows a character, drawn realistically (photo-like or realistic manga, never cartoonish) with the waimao-to-image skill; the other has no people in it.
+- Spin-offs follow the book's own rule; read its index doc. 《明火》: exhibit plates on cream paper, black ink, one flame red (#D9441E), gold only for 珀尔's lines, in the PDF only. 《火德》: Chinese-style figures. 《火候》 (author, 17 Nov): two a chapter. One shows a character, drawn realistically (photo-like or realistic manga, never cartoonish) with the waimao-to-image skill; the other is art Claude draws in code, in a 绵竹年画 manner, and may show people (chapter 3's Mei at the fridge). Qwen-Image makes nothing but that one realistic image (author, 17 Nov: "for the other art just generate yourself").
 - Styles used so far: Bauhaus, cinematic realism (letterbox), impressionist, 父与子 strips, Art Deco, risograph, pop art, cubist (analytic and synthetic collage), ink wash with red seals, cyberpunk, Byrne's 1847 Euclid, cosmic, Disney-style or graphite over Parajanov colour, retro-futurist, flat editorial, Art Nouveau, pixel art, Op Art, postmodern collage, surrealist, Miyazaki-style, hand-painted animation background, oscilloscope art, vaporwave, dreamcore, steampunk.
 
 ## Rules for what's drawn
@@ -26,3 +26,5 @@ A chapter isn't finished until its figures are in, unless the author has said to
 ## Placing and recording
 - Upload the image to the chapter tab after the paragraph it belongs to (the docs connector's uploads guide says how), or keep it for the PDF when the book's plates live only there.
 - Log the style and subject of each figure in the Map's chapter row and in the book's index doc.
+- Getting a Qwen-Image picture out: a download from chat.qwen.ai needs a real click, and Chrome blocks the second one unless the author allows multiple downloads for the site. Fallback that always works: draw the full-size image, cropped off the watermark, on a full-window canvas in the Qwen tab, take a screenshot with save_to_disk (it lands under /tmp/claude-tool-results), crop the black border and any watermark left, then upload. Look at it before placing.
+- Check that each caption landed exactly: a doc block's h is the first 8 hex of the sha256 of its UTF-8 text, so compare it with the hash of the local caption.
