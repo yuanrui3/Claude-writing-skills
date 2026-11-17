@@ -17,8 +17,10 @@ They work as they are for those books, and as worked examples for anyone buildin
 
 | Skill | What it does |
 |---|---|
-| [`slowfire-zh-check`](skills/slowfire-zh-check/SKILL.md) | Proofs a Chinese chapter before and after publishing: 翻译腔, look-alike typos found by script, canon names and terms, dates and clocks computed rather than guessed, and a scripted 汉字 count. |
+| [`slowfire-zh-check`](skills/slowfire-zh-check/SKILL.md) | Proofs a Chinese chapter before and after publishing: 翻译腔, a cold read by Qwen as a reader who hasn't read the earlier books, look-alike typos found by script, canon names and terms, dates and clocks computed rather than guessed, and a scripted 汉字 count. |
+| [`slowfire-chapter-notes`](skills/slowfire-chapter-notes/SKILL.md) | Writes and prunes a chapter's ①② notes: only what a reader from outside the dialect region can't get from the page, calibrated against the notes the author cut, with Qwen judging the borderline ones and a script to renumber after cuts. |
 | [`slowfire-figures`](skills/slowfire-figures/SKILL.md) | Makes a chapter's figures: picks the style the book allows, draws in code so it can be redrawn, checks every numeral against the text, writes the caption, places the figure and logs it. |
+| [`waimao-to-image`](skills/waimao-to-image/SKILL.md) | The reverse of `photo-to-waimao`: turns a character's 外貌描写 into a realistic figure with Qwen-Image, checks every visible detail against the text, and keeps the prompt as the character's cast entry so the face stays the same across chapters. Faces are always invented; never a real person. |
 | [`slowfire-print-edition`](skills/slowfire-print-edition/SKILL.md) | Builds an A5 Chinese PDF, plain or 注释本, from a book's Claude doc: export, spoiler-safe notes, plates, pandoc and xelatex, then checks that the PDF's text matches the doc exactly. |
 
 ## Using them
@@ -27,7 +29,8 @@ They work as they are for those books, and as worked examples for anyone buildin
   `.claude/skills/`. Claude picks it up in the next session and uses it when a request matches its description.
 - **claude.ai:** zip a skill's folder and upload it as a skill in your account's skill settings.
 
-`qwen-consult` needs Claude in Chrome and a signed-in Qwen account in that Chrome; `slowfire-zh-check` calls it for
-dialect lines. `plot-unexpectedness` works best where Claude can start sub-agents on a smaller model; without them it
+`qwen-consult` and `waimao-to-image` need Claude in Chrome and a signed-in Qwen account in that Chrome;
+`slowfire-zh-check` and `slowfire-chapter-notes` call `qwen-consult`, and `waimao-to-image` also needs access to the
+author's computer to move the image files. `plot-unexpectedness` works best where Claude can start sub-agents on a smaller model; without them it
 tells you how to run the predictor by hand. `slowfire-print-edition` needs pandoc, xelatex and CJK fonts (Noto Serif
 CJK SC) where it runs.

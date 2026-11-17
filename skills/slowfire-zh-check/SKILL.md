@@ -1,6 +1,6 @@
 ---
 name: "slowfire-zh-check"
-description: "Proof a Chinese chapter of 阴燃 or a spin-off (火候, 明火, 火德, 燎原…) before and after publishing: 翻译腔, look-alike typos, canon names and terms, dates and clocks, 汉字 count."
+description: "Proof a Chinese chapter of 阴燃 or a spin-off (火候, 明火, 火德, 燎原…) before and after publishing: 翻译腔, a Qwen cold read for comprehension, look-alike typos, canon names and terms, dates and clocks, 汉字 count."
 ---
 
 # Checking a Chinese chapter
@@ -16,7 +16,32 @@ The author reads only the Chinese, so the Chinese gets the strict check. Run thi
 - 成语、俗语 where that speaker would use them, never forced. Non-Chinese speakers get Chinese equivalents, as a good translator would give them.
 - Short or incomplete sentences are welcome, but not everywhere.
 - Ambiguous pronouns ("他背对着他说"): name one of them.
-- Dialect (成都话, 合肥话, 丰县话…) only where the book allows it. Every dialect line goes to Qwen line by line (qwen-consult skill).
+- Dialect (成都话, 合肥话, 丰县话…) only where the book allows it. Every dialect line goes to Qwen line by line (qwen-consult skill). A line Qwen passes is not proven: it passed 错得板正, and no Chengdu speaker says that. Prefer the common, blunt idiom (标准个铲铲) over a clever coinage.
+
+## 1b. Cold read by Qwen: can a reader follow it?
+A line-by-line dialect pass doesn't show whether the chapter reads. The author caught four things it missed in 火候 chapter 2:
+- 吃的都是饭, a pun that didn't land;
+- 躺舱, used before anything set it up;
+- 未记录 · 没有说出口, never explained in that book;
+- 错得板正, which no Chengdu speaker says.
+
+So before publishing, and again after any large edit, send Qwen the whole chapter cold (qwen-consult skill, the book's own chat).
+- **Strip** the note markers and the 注 section.
+- **Give the reader profile:** an adult mainland reader who likes novels, isn't from the dialect region, hasn't read the earlier volumes, and has no notes.
+- **Ask for one line per finding, quoting the text:**
+  - 一, what it can't follow or might misread, and what it takes the words to mean;
+  - 二, dialogue a local wouldn't say, with a natural version;
+  - 三, anything that turns up without being set up earlier: a place, a device, a term, a rule, a person.
+  
+  Add direct questions about any line you're unsure of, such as a pun or a new dialect line.
+- **Settle each finding** one of three ways, in this order of preference:
+  - fix the text, by setting the thing up earlier or making the line plainer;
+  - add a note (slowfire-chapter-notes);
+  - keep it as it is, for a reason you can state.
+  
+  Qwen's word is input, not instruction.
+- **Re-check late lines.** Lines added or changed after the read, including answers to the author's comments, go to Qwen in one batch before they land or right after.
+- **Log** what was taken and what wasn't in the index doc.
 
 ## 2. Typos: by script, not by eye
 - Grep every character name and key term from the name list and count each. A name that appears once where it should appear many times is usually a typo for another. Past slips: 凉峥 for 冉峥, 疑疑肉 for 粑粑肉, 耀朋友 for 耍朋友, 暖腔片 for 挡片.
@@ -39,4 +64,4 @@ n = len(re.findall(r'[一-鿿㐀-䶿]', text))
 Report it with and without captions and record it in the index doc.
 
 ## 5. Report
-Tell the author in a line or two what changed and why. Don't list every comma.
+Tell the author in a line or two what changed and why, including what the cold read flagged and how each point was settled. Don't list every comma.
