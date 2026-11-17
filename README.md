@@ -22,6 +22,7 @@ They work as they are for those books, and as worked examples for anyone buildin
 | [`slowfire-figures`](skills/slowfire-figures/SKILL.md) | Makes a chapter's figures: picks the style the book allows, draws in code so it can be redrawn, checks every numeral against the text, writes the caption, places the figure and logs it. |
 | [`waimao-to-image`](skills/waimao-to-image/SKILL.md) | The reverse of `photo-to-waimao`: turns a character's 外貌描写 into a realistic figure with Qwen-Image, checks every visible detail against the text, and keeps the prompt as the character's cast entry so the face stays the same across chapters. Faces are always invented; never a real person. |
 | [`slowfire-print-edition`](skills/slowfire-print-edition/SKILL.md) | Builds an A5 Chinese PDF, plain or 注释本, from a book's Claude doc: export, spoiler-safe notes, plates, pandoc and xelatex, then checks that the PDF's text matches the doc exactly. |
+| [`slowfire-real-people`](skills/slowfire-real-people/SKILL.md) | Turns real people the author knows into characters nobody can pick out: keep behaviour and voice, change every identifying label, move telling details to other characters, split or merge into the existing cast, test the result, and record only the fiction. This public copy has its examples made generic; it names no characters. |
 
 ## Using them
 
