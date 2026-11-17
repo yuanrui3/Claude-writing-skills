@@ -16,6 +16,9 @@ it; it's built for that. These skills aim the other way:
   predicts is the cliché to avoid, and every surprise has to be set up earlier in the text.
 - **Checked against the real world.** Dialect lines and realism go to a second model (Qwen) as an outside reader;
   dates, clocks, ages and sums are computed in code; every real fact in a note is checked.
+- **Craft from literature, not formula.** Each relationship beat is carried by a move from a named work and tested
+  on the page, with 言情 and 网文 tells searched out (`serious-lit-relationships`); every simile has to come from the
+  character's own world (`in-world-imagery`), and every line from that character's mouth (`character-voice`).
 - **Ideas shown, never preached.** A theme becomes a question several characters answer differently
   (`story-idea-weave`), and satire is spoken by characters and built on the book's own facts (`roast-in-fiction`).
 - **Ethics written in.** Real people are disguised until nobody who knows them could pick them out
@@ -46,6 +49,12 @@ They work as they are for those books, and as worked examples for anyone buildin
 |---|---|
 | [`slowfire-zh-check`](skills/slowfire-zh-check/SKILL.md) | Proofs a Chinese chapter before and after publishing: 翻译腔, AI tells (去AI味) judged in context, a cold read by Qwen as a reader who hasn't read the earlier books, adversarial readers who look only for problems, look-alike typos found by script, canon names and terms, dates and clocks computed rather than guessed, and a scripted 汉字 count. |
 | [`sichuanese-dialogue`](skills/sichuanese-dialogue/SKILL.md) | Writes and checks 四川话 dialogue (Chengdu, Chongqing) against the project's own verified lexicon first, and sends Qwen only the new or doubtful lines, one batch per chapter; every settled or rejected form goes back into the lexicon. |
+| [`serious-lit-relationships`](skills/serious-lit-relationships/SKILL.md) | Writes relationships the way serious fiction does, not 言情: each relationship beat is carried by a move from a named work (《繁花》's 不响, 王小波, 谷崎, Duras, Munro, Carver, Ernaux, Ferrante, Rooney…) with a test on the page, and 言情 and 网文 tells are searched for and fixed. |
+| [`character-voice`](skills/character-voice/SKILL.md) | A voice card for each speaker, a cover test (hide the tags: could two people swap lines?), and a check for the writer's own quotable lines leaking into a character's mouth. |
+| [`in-world-imagery`](skills/in-world-imagery/SKILL.md) | Audits every simile: each image must come from the point-of-view character's own trade, place or body, one a paragraph at most; the future shows in one line someone handles, never a paragraph of mechanism. |
+| [`chapter-pace-braid`](skills/chapter-pace-braid/SKILL.md) | Plans a chapter: one real relationship event at least, four to seven braided sections under two clocks, detail spent on people rather than logistics (measured paragraph by paragraph), contrast cuts, and a last line that turns. |
+| [`intimate-scenes`](skills/intimate-scenes/SKILL.md) | Sex and flirting in adult literary fiction: blended into the plot rather than set apart, something shifts between the two people every time, bodies specific and imperfect, consent shown in BDSM, blank paragraphs for a reticent partner, and hard limits (never minors, never anyone real). |
+| [`netspeak-dialogue`](skills/netspeak-dialogue/SKILL.md) | Today's Chinese internet speech (抽象话, 东北整活) for named characters only, from a vetted lexicon, aged for a story set in 2048; real streamers appear only as quoted clips, and slurs, parent insults and mockery of the dead are out. |
 | [`slowfire-chapter-notes`](skills/slowfire-chapter-notes/SKILL.md) | Writes and prunes a chapter's ①② notes: only what a reader from outside the dialect region can't get from the page, calibrated against the notes the author cut, with Qwen judging the borderline ones and a script to renumber after cuts. |
 | [`slowfire-figures`](skills/slowfire-figures/SKILL.md) | Makes a chapter's figures: picks the style the book allows, draws in code so it can be redrawn, checks every numeral against the text, writes the caption, places the figure and logs it. |
 | [`waimao-to-image`](skills/waimao-to-image/SKILL.md) | The reverse of `photo-to-waimao`: turns a character's 外貌描写 into a realistic figure with Qwen-Image, checks every visible detail against the text, and keeps the prompt as the character's cast entry so the face stays the same across chapters. Faces are always invented; never a real person. |

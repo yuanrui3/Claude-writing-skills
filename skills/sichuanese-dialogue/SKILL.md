@@ -16,7 +16,7 @@ The aim is fewer Qwen round trips without worse dialect. The project doc `claude
 - **Prefer the common blunt idiom** over a clever coinage. If a line sounds like a quotable 金句, it's the author talking; rewrite it in the speaker's plain words.
 - **Don't salt every line with particles.** One 嘛, 噻 or 哈 where the speaker would put it, not one per clause.
 - **Address terms follow age and relation:** 嬢嬢 for an older woman or a known lane figure, 大姐 between strangers of similar age, 老汉儿 for one's father.
-- **Chengdu and Chongqing differ.** Chongqing is harder and louder (老子, 啷个); Chengdu is 咒, ironic, 耙耳朵. Regional jabs always get a comeback (roast-in-fiction).
+- **Chengdu and Chongqing differ.** Chongqing is harder and louder (老子, 啷个); Chengdu is 软, ironic, 耙耳朵. Regional jabs always get a comeback (roast-in-fiction).
 
 ## Checking
 1. Script: pull every dialogue line spoken by a Sichuan speaker.

@@ -32,7 +32,7 @@ Check three layers.
 - Explanation chains: 这意味着, 他终于明白, 她这才意识到.
 - Inflation and prophecy: 意义深远, 他不知道的是, 多年以后.
 - Body parts that only label an emotion: 指节泛白, 指尖轻叩, 嘴角勾起.
-- Genre stock lines. The 耗美 scent-marking 你身上还是我的味道 was replaced by a callback to the night itself.
+- Genre stock lines. The 耽美 scent-marking 你身上还是我的味道 was replaced by a callback to the night itself.
 - 电报体: facts reported one clause at a time when they are one cause chain.
 
 **Weight.** Name in one line what each scene must make the reader live through. Then:
