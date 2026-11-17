@@ -11,7 +11,7 @@ Skills for [Claude](https://claude.ai) that help with writing fiction, mostly Ch
 
 ### For the 阴燃 books
 
-These three come from the workflow behind the 《阴燃》 novels and their spin-offs (《明火》《火德》《燎原》《火候》…). They
+These come from the workflow behind the 《阴燃》 novels and their spin-offs (《明火》《火德》《燎原》《火候》…). They
 expect that setup: each book's Claude doc with a Map tab, an index doc per book under `claude/`, and the other skills here.
 They work as they are for those books, and as worked examples for anyone building a similar pipeline for their own.
 
