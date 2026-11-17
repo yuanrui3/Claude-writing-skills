@@ -1,7 +1,32 @@
 # Claude writing skills
 
-Skills for [Claude](https://claude.ai) that help with writing fiction, mostly Chinese fiction. Each one is a folder with a
-`SKILL.md` that tells Claude when to use it and how.
+Skills for writing serious fiction with [Claude](https://claude.ai): literary novels in Chinese with science-fiction
+elements, where a careful reader has to be able to trust every sentence, date and dialect line. They were built while
+writing the [《阴燃 · The Slow Fire》](https://slowfire-novel.github.io/Slow-fire-novel/) series and its spin-offs, and
+most of their rules come from a mistake caught in those books. Each skill is a folder with a `SKILL.md` that tells
+Claude when to use it and how.
+
+## How this differs from Oh Story
+
+[Oh Story](https://github.com/zenstory-ai/oh-story-claudecode) is a popular skill pack for Chinese web fiction: it
+scans the Qidian and Fanqie charts, takes bestsellers apart, and writes to proven tropes. If that's what you write, use
+it; it's built for that. These skills aim the other way:
+
+- **Away from the trope, not toward it.** `plot-unexpectedness` has a weaker model guess what comes next. What it
+  predicts is the cliché to avoid, and every surprise has to be set up earlier in the text.
+- **Checked against the real world.** Dialect lines and realism go to a second model (Qwen) as an outside reader;
+  dates, clocks, ages and sums are computed in code; every real fact in a note is checked.
+- **Ideas shown, never preached.** A theme becomes a question several characters answer differently
+  (`story-idea-weave`), and satire is spoken by characters and built on the book's own facts (`roast-in-fiction`).
+- **Ethics written in.** Real people are disguised until nobody who knows them could pick them out
+  (`slowfire-real-people`); portraits never identify anyone, and faces never come from a photo.
+- **Made for the finished book.** Spoiler-safe notes, figures checked numeral by numeral against the text, and an
+  annotated print edition whose text is verified identical to the manuscript.
+
+Both keep a book's continuity in files and both strip AI-sounding prose. The difference is what the book is for.
+
+**中文简介：** 一套用 Claude 写严肃文学的技能，面向带科幻设定的中文长篇，是在写《阴燃》系列的过程中一条条攒下来的。和面向起点、番茄的网文技能包
+Oh Story 不同，它不追套路，而是先测出读者猜得到的套路，再避开；方言和现实细节交给另一个模型（通义千问）冷读，日期、钟点、钱数用代码算；主题交给人物去争，不让叙述去讲；真人原型改到熟人认不出；最后出的是带注释、配图、和稿子逐字一致的印刷版。
 
 | Skill | What it does |
 |---|---|
