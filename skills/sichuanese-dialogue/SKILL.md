@@ -31,3 +31,12 @@ The aim is fewer Qwen round trips without worse dialect. The project doc `claude
 ## After
 - Add each newly settled or rejected item to the lexicon doc the same day: form, meaning, speaker, source. Read the doc in full before writing it back. This growing list is what saves future Qwen rounds.
 - When the author corrects a line, that correction goes into the lexicon as settled (or rejected) without asking Qwen.
+
+## Whole-book pass (the 海上花 standard)
+Use when a volume is finished or the author wants the book to be a landmark of dialect fiction.
+- **Standard first.** Keep a house standard doc (火候: claude/chengdu-standard.md): narration in 普通话, natives speak dialect in full (words and grammar, not particles stuck on Mandarin), one spelling per word, registers per speaker, and a 例言 for the front of the book (as 韩邦庆 wrote for 海上花), placed as its own tab before 第一章.
+- **Extract.** Script every quote in the dialect sections (Lafayette sections never) and flag Mandarin markers: 呢, 什么, 怎么, 知道, 没有 as a verb, 谁, 别, 一下, 家里, 着 for states, 这么, 吧. Read each hit; skip speakers who speak Mandarin by design (王鹏, 铁子, 乐子, 何蔓 outside home).
+- **Settled swaps need no Qwen:** 呢→喃, 着→起的 (门锁起的), 没有→没得, 哪里→哪点, X里→X头.
+- **One Qwen batch** for new or doubtful forms, plus a 金句 check on any line that sounds like a slogan. Expect Qwen to flatten toward Mandarin or drop a pronoun the line needs; keep what carries meaning.
+- **Cards**, one per line, minimal finds; read back by hash. The real drift is usually small and concentrated in one or two speakers; say so rather than inflating the pass.
+- **Lexicon** updated the same day: settled, rejected, disputed, and a register line for every speaker touched.

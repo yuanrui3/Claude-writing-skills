@@ -1,6 +1,6 @@
 ---
 name: "intimate-scenes"
-description: "Write sex and flirting in 阴燃 and its spin-offs (火候 first): the author's heat level, sex blended into the plot, power that shifts, BDSM and roles, blank paragraphs, underlining, hard limits."
+description: "Write sex and flirting in 阴燃 and its spin-offs (火候 first): heat level, explicit and implicit scenes, sex blended into the plot, power that shifts, BDSM and roles, blank paragraphs, underlining, limits."
 ---
 
 # Sex and flirting scenes
@@ -11,6 +11,9 @@ description: "Write sex and flirting in 阴燃 and its spin-offs (火候 first):
 - **Blended in.** No long paragraphs that are only sex. Desire rides on talk, work, money, a joke or an object, a sentence or two of body at a time. A fuller scene only where the author allows it (ch2's upstairs scene with the 一桌, then cut by a quarter).
 - **Enough of it.** The author marked ch5 "too little sex" and ch6 "not sexual enough". Every chapter that has uninhibited adults in it carries at least one scene where bodies are on the page, not only flirting. Add flirting (骚话) in dialogue on top of that.
 - **Blank paragraphs.** With a conservative partner (Lydia), the sex is blank paragraphs. Place them where the reader most wants the scene, as 《废都》 does with its □□□.
+- **Variety (17 Nov).** Vary positions, places and pace across the book; no two scenes on the page alike. Some acts are implied, never named (see Implicit scenes): anal once in a straight scene (努尔, ch7), oral once (唐蕾 in 胡师傅's car, ch22). Finishing inside only where the canon has no condom rule, some for pregnancy, some for excitement.
+- **Bodies under the gaze.** Men's bodies can be written as seductively as women's, always with one imperfect detail (冉峥: defined, not template-shredded; acne pits on his back). For women, the gaze may also rest on thin hands, feet, ankles, calves, the neck, the back and 锁骨, not only waist, chest and hips.
+- **Watching.** A cuckold or cuckquean thread is consensual, and the watcher keeps the power (Corinne aroused by 冉峥's report on 萨凡纳: what she owns is the report).
 
 ## Making a scene literary
 
@@ -19,6 +22,28 @@ description: "Write sex and flirting in 阴燃 and its spin-offs (火候 first):
 - Something else is in the room: a joke, an object or the job (王小波, 张爱玲, 《推拿》).
 - The aftermath gets its line, and the scene often ends there.
 - Flirting the reader can feel: bodies close together, where the eyes go, a touch or its refusal. A verbal spar alone isn't flirting yet (the author's comment on ch5's water cooler: "how is this sexual").
+
+### What the man–woman scenes kept missing (Grok's read, 17 Nov)
+The author found the gay scenes better written. Check every straight scene for these:
+- **No narrator summary mid-scene.** Cut lines that state what the moment means ("样册上没有这一页", "那一声她会……这一声她不会"). The body and the object carry it.
+- **Her desire stays active through the climax.** She pulls, sets the pace with her heels or ankles, presses on his body. Not only held, pinned and "漏出来".
+- **His body stays on the page during the act**, not only while undressing: muscles tightening, sweat, smell, weight (冉峥's neck: salt, iron and chalk).
+- **Outside sound doesn't cover every scene.** One sound at one beat at most (not 划拳, then fireworks plus bells, then pharmacy packs).
+- **Tics:** "一下一下", stacked "像" similes.
+- **The benchmark** (ch19, 蒲青 and Luis in the dry store): the space, a sound with a person behind it, each body detail tied to the pair's history, very short lines that move the act, an aftermath that drops straight back into the day (a sneeze).
+
+## Implicit scenes
+Use when the author asks for an act "implicitly", or for a partner who isn't blank-paragraph conservative but where naming would cheapen the scene.
+- **Never name the act or the body part.** The reader puts it together from three things placed close:
+  1. **a constraint that explains it**: a vow, a rule, a car that has to be driven ("前头留着，留给五月");
+  2. **props**: what was bought, where, how often (lube and condoms from Corinne's pharmacy, three times; the small box by 唐蕾's keys);
+  3. **the body's evidence**: posture, hair spread over his lap, a pillow corner bitten, a thumb wiping the corner of the mouth.
+- **Speak in someone's routine.** The bus driver murmurs the stops and breaks off at one (玉林北路), takes the yellow light softly; a bargain is called "一个价钱", afterwards "像刚合伙做完一桩不太体面的买卖".
+- **Cut before the act, return on the aftermath line.** The gap is the scene ("到站了。").
+- **Almost seen.** Put it where the world nearly looks in: a fogged car window, a driverless car honking, the mosque light passed on the way home. The risk carries the heat.
+- **The reason is the character's own, never a group's.** 努尔's choice is her bargain with herself, not what Islam teaches; that keeps a known stereotype off the page.
+- **Test:** a reader who knows can say exactly what happened; one who doesn't still feels the heat. Neither → add one concrete prop. The act named → cut the naming line.
+- Underline implicit scenes like any other; log them in the index by act and chapter.
 
 ## Roles
 
@@ -37,4 +62,5 @@ description: "Write sex and flirting in 阴燃 and its spin-offs (火候 first):
 
 - Underline every sexual and flirting passage: `<u>` in the local draft, and in the doc an underline mark applied by whole-block replace (the hash is unchanged).
 - Never send sex scenes to Qwen; it censors them and the chat gets filtered. For the surrounding lines, blur the prompt.
-- Log in the index which scenes carry sex in each chapter, so the count stays visible.
+- **Outside read of sex scenes: Grok** (grok.com in Chrome, the author is signed in). Upload the scenes as one .md file through the page's file input (with a one-line context per scene and a benchmark scene the author likes), ask for a blunt read: what's flat or fake, whose desire is passive, repetition across scenes, a few 原句 → 改句. Free "Fast" mode; "Expert" opens a paid plan, don't buy. Record the chat URL in the index. Its word is input: take the diagnosis, write the fixes yourself, and lay changes to published text as doc suggestions for the author's ✓.
+- Log in the index which scenes carry sex in each chapter, so the count stays visible: who, where, position, explicit or implicit, condom or not. Check the log before writing a new scene so place and position don't repeat.
