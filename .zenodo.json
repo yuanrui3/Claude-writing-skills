@@ -1,0 +1,12 @@
+{
+  "title": "Claude Writing Skills",
+  "version": "v0.1.0",
+  "description": "<p>A collection of writing skills and a dialect lexicon for Chinese literary fiction and science fiction.</p><p>Original skill text, documentation and lexicon entries are CC BY 4.0. Original code snippets and the credited Oh Story adaptations retain their applicable MIT terms. See LICENSE.md for the scope and attribution.</p>",
+  "creators": [
+    {
+      "name": "Chen, Yuanrui"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "upload_type": "software"
+}
