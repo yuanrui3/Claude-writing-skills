@@ -70,6 +70,16 @@ They work as they are for those books, and as worked examples for anyone buildin
 | [`novel-refinement-passes`](skills/novel-refinement-passes/SKILL.md) | Eleven passes over a finished volume that need no human judge: continuity, canon, verbal tics, dialect, voices, imagery, hot and cold pacing, intimate scenes, threads, figures and the print PDF. Each finds problems by script or rule first, then judges by hand; changes to published text go in as suggestions for the author to accept. |
 | [`roast-in-fiction`](skills/roast-in-fiction/SKILL.md) | Puts the [roast-anything](https://github.com/yuanrui3/AI-benchmark-for-roasting/blob/main/.claude/skills/roast-anything/SKILL.md) method in a character's mouth: 吐槽, quarrels, toasts and satirical narration built on the book's own facts, in that character's voice, where the roast changes the scene and someone answers back. |
 
+### For 骈文 (parallel prose)
+
+Written for 《拉法叶赋（并序）》, a 骈赋 the author wrote alongside the novels. Gemini drafts, Claude checks, and the author decides each change by quiz.
+
+| Skill | What it does |
+|---|---|
+| [`pianwen-fu-writing`](skills/pianwen-fu-writing/SKILL.md) | Writes and revises a 骈赋 with the author: 四六 and 隔句对 led by 领字, a 骈散 balance near 《洛神赋》 rather than 《哀江南赋》, feeling carried by an image and never stated. Every rewrite comes with an image list so nothing the author saw is lost or added; Gemini's drafts are checked line by line against a catalogue of its typical failures; 典故 must read without the note; a Qwen blind read tests what comes through. |
+| [`pianwen-yinlv-check`](skills/pianwen-yinlv-check/SKILL.md) | Checks 平仄 and strict 平水韵: rhyme runs per paragraph (-n, -ng and -m groups kept apart), 重韵, paired clauses that both end 平, runs of four or more 仄 (入声 counted as 仄), polyphones read by sense. Fixes may change only sound, cheapest first: punctuation, an empty word, a synonym, a reorder. Outside 音律 reviews are verified claim by claim. |
+| [`pianwen-notes-zhuyin`](skills/pianwen-notes-zhuyin/SKILL.md) | Annotates a 骈文 for a college-educated reader who isn't a classics specialist: 注 with bold keys and sourced allusions, 注音 for rare characters and sense-bound readings chosen with Gemini and Qwen independently, and a 致敬篇目 that is re-checked against the text after every revision, through to the PDF. |
+
 ## Using them
 
 - **Claude Code:** copy a skill's folder into `~/.claude/skills/` (for all your projects) or into a project's
@@ -79,5 +89,5 @@ They work as they are for those books, and as worked examples for anyone buildin
 `qwen-consult` and `waimao-to-image` need Claude in Chrome and a signed-in Qwen account in that Chrome;
 `slowfire-zh-check`, `slowfire-chapter-notes`, the two dialect skills and `novel-comprehension-test` call `qwen-consult`, and `waimao-to-image` also needs access to the
 author's computer to move the image files. `plot-unexpectedness` works best where Claude can start sub-agents on a smaller model; without them it
-tells you how to run the predictor by hand. `slowfire-print-edition` needs pandoc, xelatex and CJK fonts (Noto Serif
+tells you how to run the predictor by hand. The three 骈文 skills drive Gemini through Claude in Chrome and consult Qwen the same way. `slowfire-print-edition` needs pandoc, xelatex and CJK fonts (Noto Serif
 CJK SC) where it runs.
