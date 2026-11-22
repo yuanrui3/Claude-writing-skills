@@ -1,5 +1,7 @@
 # Claude writing skills
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24448781.svg)](https://doi.org/10.5281/zenodo.24448781)
+
 Skills for writing serious fiction with [Claude](https://claude.ai): literary novels in Chinese with science-fiction
 elements, where a careful reader has to be able to trust every sentence, date and dialect line. They were built while
 writing the [《阴燃 · The Slow Fire》](https://slowfire-novel.github.io/Slow-fire-novel/) series and its spin-offs, and
